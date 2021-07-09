@@ -1,5 +1,6 @@
-FROM redis:6-alpine
+FROM nginx:stable-alpine
 
-COPY redis.conf .
+COPY nginx.conf .
+COPY nginx-start .
 
-ENTRYPOINT ["redis-server", "./redis.conf"]
+ENTRYPOINT ["./nginx-start"]
