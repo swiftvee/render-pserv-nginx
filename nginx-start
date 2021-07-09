@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 # Replace environment variables in nginx config in the ${} shell format
 # with their values. Only ENV variables in the list will be replaced.
