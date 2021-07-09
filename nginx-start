@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Replace environment variables in nginx config in the ${} shell format
-# with their values.
-envsubst '${APP_HOST}' < ./nginx.conf > ./nginx.conf
+# with their values. Only ENV variables in the list will be replaced.
+envsubst '${PORT},${APP_HOST}' < ./nginx.conf > ./nginx.conf
 
 nginx -c ./nginx.conf
